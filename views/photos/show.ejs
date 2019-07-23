@@ -7,13 +7,19 @@
   </head>
   <body>
     <div class="show-body">
-      <a href="/">Home</a>
-      <a href="/photos/">Photos Index</a>
-      <h1><%=photo.title%></h1>
+      <div class="title-bar">
+        <nav class='nav-bar'>
+          <a href="/">Home</a>
+          <a href="/photos/">Photos Index</a>
+        </nav>
+        <h1 class="show-title"><%=photo.title%></h1>
+        <form class="edit-form" action="/photos/<%=photo._id%>/edit" method="get">
+          <input type="submit" name="" value="Edit Photo Info">
+        </form>
+      </div>
+
       <img class="show-photo" src="<%=photo.url%>" alt="<%=photo.title%>">
-      <form class="" action="/photos/<%=photo._id%>/edit" method="get">
-        <input type="submit" name="" value="Edit Photo Info">
-      </form>
+
     </div>
   </body>
 </html>
