@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="/css/main.css">
+    <title>Show Route</title>
+  </head>
+  <body>
+    <div class="show-body">
+      <a href="/">Home</a>
+      <a href="/photos/">Photos Index</a>
+      <h1><%=photo.title%></h1>
+      <img class="show-photo" src="<%=photo.url%>" alt="<%=photo.title%>">
+      <form class="" action="/photos/<%=photo._id%>/edit" method="get">
+        <input type="submit" name="" value="Edit Photo Info">
+      </form>
+    </div>
+  </body>
+</html>

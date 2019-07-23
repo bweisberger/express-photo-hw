@@ -1,0 +1,51 @@
+.index-body{
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  grid-template-rows: .5fr 5fr .25fr
+}
+
+.index-title{
+  text-align: center;
+  background-color: cyan;
+  color: magenta;
+  font-size: calc(26pt + 1.5vw);
+}
+
+.photo-wrapper{
+  grid-row: 2;
+}
+
+.photo-image{
+  max-width: 100%;
+  height: auto;
+}
+
+.title-bar{
+  grid-row: 1;
+  grid-column: 1 / span 6;
+  background-color: cyan;
+  display: grid;
+  grid-template-rows: 1fr;
+}
+
+.photo-div{
+  text-align: center;
+}
+
+.nav-bar{
+  grid-row: 1;
+  text-align: left;
+  place-self: center start;
+  color: white;
+  font-size: calc(12pt + 1vw);
+}
+
+.home-nav{
+  margin: 5vw 2vw;
+  color: magenta;
+}
+
+.new-nav{
+  margin: 5vw 2vw;
+  color: magenta;
+}

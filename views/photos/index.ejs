@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="/css/main.css">
+    <title>Photo Home Page</title>
+  </head>
+  <body>
+    <div class="index-body">
+      <div class="title-bar">
+        <h1 class="index-title">Photos</h1>
+        <nav class="index-nav nav-bar">
+          <a class="home-nav" href="/">Home</a>
+          <a class="new-nav" href="/photos/new">Post New Photo</a>
+        </nav>
+      </div>
+
+      <div class="photo-wrapper">
+        <%photos.forEach(function(photo){%>
+          <div class="photo-div">
+            <h3 class="photo-title"><a href="/photos/<%=photo._id%>"><%=photo.title%></a></h3>
+            <img class="photo-image" src="<%=photo.url%>" alt="<%=photo.title%>">
+            <form class="delete-photo" action="/photos/<%=photo._id%>?_method=DELETE" method="post">
+              <input type="submit" name="" value="Delete Photo">
+            </form>
+          </div>
+        <%})%>
+      </div>
+    </div>
+  </body>
+</html>
