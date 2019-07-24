@@ -9,9 +9,9 @@
     <div class="new-photo-body">
       <h1>Post New Photo</h1>
       <form class="new-photo-form" action="/photos" method="post">
-      User: <select>
+      User: <select name="user">
         <%users.forEach(function(user){%>
-          <option name="user" value='<%=user._id%>'><%=user.name%></option>
+          <option value='<%=user._id%>'><%=user.name%></option>
           <%})%>
       </select>
       Title:  <input type="text" name="title" value="">
