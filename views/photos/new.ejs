@@ -9,6 +9,11 @@
     <div class="new-photo-body">
       <h1>Post New Photo</h1>
       <form class="new-photo-form" action="/photos" method="post">
+      User: <select>
+        <%users.forEach(function(user){%>
+          <option value='<%=user.name%>'><%=user.name%></option>
+          <%})%>
+      </select>
       Title:  <input type="text" name="title" value="">
       URL:  <input type="text" name="url" value="">
       <input type="submit" name="" value="Post Photo">

@@ -55,31 +55,25 @@ body {
   max-height: auto;
 }
 
-.title-bar{
-  grid-row: 1;
-  grid-column: 1 / span 6;
-  background-color: rgb(180, 180, 180);
-  /* display: grid;
-  grid-template-rows: 1fr; */
-  opacity: .5;
-}
-
 .photo-div{
   text-align: center;
+  /* opacity: .1; */
+  box-shadow: 10px 10px 5px grey;
 }
 
 .nav-bar{
   grid-row: 1;
   text-align: left;
-  place-self: end start;
-  color: rgb(171, 82, 111)
+  /* place-self: end start; */
+  color: darkmagenta;
   font-size: calc(12pt + 1vw);
-  max-width: 100%;
+  /* max-width: 100%; */
   height: auto;
 }
 
 .home-nav{
   margin: 5vw 2vw;
+
 }
 
 .new-nav{

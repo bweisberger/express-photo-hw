@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="/css/main.css">
+    <title>Edit User Page</title>
+  </head>
+  <body>
+    <div class="edit-body">
+      <h1>Edit User Information</h1>
+      <form class="edit-user-form" action="/users/<%=user._id%>?_method=PUT" method="post">
+        Name: <input type="text" name="name" value="<%=user.name%>"><br/>
+        Password: <input size="50" type="text" name="password" value="<%=user.password%>"><br/>
+        <input type="submit" name="" value="Submit User Changes">
+      </form>
+    </div>
+  </body>
+</html>

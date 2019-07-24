@@ -9,6 +9,12 @@
     <div class="edit-body">
       <h1>Edit Photo Information</h1>
       <form class="edit-photo-form" action="/photos/<%=photo._id%>?_method=PUT" method="post">
+        <p>Current User: <%=photo.user.name%></p>
+        User: <select>
+        <%users.forEach(function(user){%>
+          <option value='<%=user.name%>'><%=user.name%></option>
+        <%})%>
+          </select>
         Title: <input type="text" name="title" value="<%=photo.title%>"><br>
         URL: <input size="150" type="text" name="url" value="<%=photo.url%>"><br>
         <input type="submit" name="" value="Submit Photo Changes">
