@@ -1,81 +1,103 @@
-.index-body{
+.user-index-body{
+  margin: 0;
   display: grid;
-  grid-template-columns: repeat(6, 1fr);
-  grid-template-rows: .25fr 5fr .25fr;
+  grid-template-rows: 60px 60px 1fr 50px;
+  grid-template-columns: 20px 1fr 120px 20px;
+  background: rgb(230, 230, 230);
+  font-family: 'PT Sans', sans-serif;
 }
 
-body {
-  background: url('https://cdn.pixabay.com/photo/2017/02/01/22/02/mountain-landscape-2031539_960_720.jpg');
-  background-repeat: no-repeat;
-  background-size: 100% auto;
+.body{
+  
 }
 
-.index-title, .show-title{
-  text-align: center;
-  color: rgb(171, 82, 111);
-  font-size: calc(26pt + 1.5vw);
+.user-link{
+  font-family: 'PT Sans', sans-serif;
+  font-weight: bolder;
+  font-size: calc(20pt + 0.5vh);
+  text-decoration: none;
+  color: rgb(90, 99, 99);
+  z-index: 20;
+  display: inline-block;
+  /* width: 75px; */
+  grid-row: 1;
+  grid-column: 1;
+  margin-left: 5px;
 }
 
-.photo-wrapper{
+.new-user-form{
+  grid-column: 3;
+  color: rgb(90, 99, 99);
+  margin-top: 5px;
+}
+
+.new-user-input {
+  background-color: rgb(255,119,5);
+}
+
+.user-space{
+  grid-row: 3;
+  grid-column: 2 / span 2;
+  background: rgb(90, 99, 99);
+  display: grid;
+}
+
+.index-user-div{
+  margin: 5px;
+  background: white;
+  display: grid;
+  /* place-self: center start; */
+}
+
+.user-link:hover {
+  color: rgb(255, 63, 5);
+}
+
+/* .index-photo-link{
+  display: ;
+} */
+
+.user-index-photo{
+  width: 10vw;
+  border-radius: 4px;
+  height: auto;
+  overflow: hidden;
+  border: thin rgb(255, 63, 5) solid;
   grid-row: 2;
+  margin: 5px;
 }
 
-.navbar-brand{
-  font-size: 26pt;
-  color: rgb(95,86,102);
-  background: linear-gradient(90deg, rgba(255,119,5,0.9743084733893558) 0%, rgba(218,13,205,1) 50%, rgba(227,24,58,1) 100%);
-  -webkit-background-clip: text;
+.site-header{
+  grid-row: 1;
+  grid-column: 1 / span 3;
+  display: grid;
+  font-family: 'PT Sans', sans-serif;
+  grid-template-columns: 120px 1fr 100px;
+  background-color: rgb(90, 99, 99);
+  margin: 0;
+}
+
+.site-brand{  
+  margin-left: 10px;
+  font-size: calc(10pt + 0.5vh);
+  background: rgb(255,119,5);
+  background: linear-gradient(90deg, rgba(255,119,5,0.9743084733893558) 0%, rgba(227,24,58,1) 100%);
+  -webkit-background-clip: text; 
   -webkit-text-fill-color: transparent;
 }
 
-.edit-form{
-  grid-column: 2;
-  text-align: center;
-  margin: 0 auto;
+.site-menu{
+  grid-column: 3;
+  place-self: center right;
+  padding: 0 3vw;
+  background: rgb(255, 63, 5);
+  -webkit-background-clip: text; 
+  -webkit-text-fill-color: transparent;
 }
 
-.show-body{
-  display: grid;
-  grid-template-rows: .5fr .5fr 5fr .25fr;
-  grid-template-columns: 1fr 3fr 1fr;
-  background-repeat: no-repeat;
-  background-size: 100% auto;
-  background-image: url('https://d2v9y0dukr6mq2.cloudfront.net/video/thumbnail/BYi5L19-invj6xvv/videoblocks-confetti-party-popper-explosions-on-a-green-background-3d-animation-4k_bpphp2rim_thumbnail-full01.png');
+.site-menu:hover{
+  -webkit-text-fill-color: cyan
 }
 
-.show-photo{
-  grid-column: 2;
-  grid-row: 3;
-  max-width: 100%;
-  height: auto;
-}
 
-.photo-image{
-  max-width: 100%;
-  max-height: auto;
-}
 
-.photo-div{
-  text-align: center;
-  /* opacity: .1; */
-  box-shadow: 10px 10px 5px grey;
-}
-
-.nav-bar{
-  grid-row: 1;
-  text-align: left;
-  /* place-self: end start; */
-  color: darkmagenta;
-  font-size: calc(12pt + 1vw);
-  /* max-width: 100%; */
-  height: auto;
-}
-
-.home-nav{
-  margin: 5vw 2vw;
-
-}
-
-.new-nav{
-  margin: 5vw 2vw;
-}

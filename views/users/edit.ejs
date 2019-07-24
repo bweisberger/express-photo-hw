@@ -6,6 +6,7 @@
     <title>Edit User Page</title>
   </head>
   <body>
+  <%-include ../../public/partials/header.ejs%>
     <div class="edit-body">
       <h1>Edit User Information</h1>
       <form class="edit-user-form" action="/users/<%=user._id%>?_method=PUT" method="post">

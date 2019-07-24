@@ -6,6 +6,7 @@
     <title>Edit Page</title>
   </head>
   <body>
+    <%-include ../../public/partials/header.ejs%>
     <div class="edit-body">
       <h1>Edit Photo Information</h1>
       <form class="edit-photo-form" action="/photos/<%=photo._id%>?_method=PUT" method="post">

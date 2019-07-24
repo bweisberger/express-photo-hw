@@ -7,8 +7,10 @@ const Photos = require('../models/photos')
 router.get('/', async (req, res)=>{
   try{
     const users = await Users.find();
+    const photos = await Photos.find();
     res.render('users/index.ejs', {
-        users: users
+        users: users,
+        photos: photos
       })
   } catch(err) {
     res.send(err);

@@ -4,17 +4,31 @@
         <title></title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link href="css/style.css" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=PT+Sans:400,700&display=swap" rel="stylesheet">
+        <link href="/css/main.css" rel="stylesheet">
     </head>
-    <body>
-    <ul>
+    <body class="user-index-body">
+    <%-include ../../public/partials/header.ejs%>
+    <form class="new-user-form" action="/users/" method="POST">
+        Make new user: <input size="15" class="new-user-input" type='text' name='name' value="">
+    </form>
+    <div class="user-space">
         <%users.forEach(function(user){%>
-            <li><a href="/users/<%=user._id%>"><%=user.name%></a></li>
-            <form action="/users/<%=user._id%>>?_method=DELETE" method="POST">
-                <input type="submit" name="" value="Delete User">
-            </form>
+        <div class="index-user-div">
+            <a class="user-link" href="/users/<%=user._id%>"><%=user.name%></a>
+            <div class="index-photo-space">
+            <%photos.forEach(function(photo){%>
+                <%if(photo.user.toString() === user.id){%>
+                <a class="index-photo-link" href="/photos/<%=photo._id%>"><img class='user-index-photo' src='<%=photo.url%>'></a>
+                <%}%>
+           <%})%>
+           </div>
+        </div>
         <%})%>
-    </ul>
+    </div>
+    
+    
+    
         
     </body>
 </html>
