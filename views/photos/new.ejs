@@ -11,7 +11,7 @@
       <form class="new-photo-form" action="/photos" method="post">
       User: <select>
         <%users.forEach(function(user){%>
-          <option value='<%=user.name%>'><%=user.name%></option>
+          <option name="user" value='<%=user._id%>'><%=user.name%></option>
           <%})%>
       </select>
       Title:  <input type="text" name="title" value="">

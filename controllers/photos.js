@@ -32,10 +32,8 @@ router.get('/new', async (req, res)=>{
 //post route
 router.post('/', async (req, res)=>{
   try {
-    const user = await Users.find({name: req.body.user});
-  req.body.user = user._id;
-  console.log(req.body, "<----req.body in photo post route"
-  const photo = await Photos.create(req.body);
+    console.log(req.body, "<----req.body in photo post route");
+    const photo = await Photos.create(req.body);
       res.redirect("/photos/");
   } catch(err){
     res.send(err);
